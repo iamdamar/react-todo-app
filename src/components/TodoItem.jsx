@@ -3,9 +3,12 @@ import React from "react"
 const TodoItem = ({todo, toggleCompleted, deleteTodo}) => {
     const getTodoTitleStyle = () => {
         if (todo.completed === true) {
-            return {textDecoration: 'line-through'}
+            return {textDecoration: 'line-through', 
+                    backgroundColor: '#ffffff',
+                    color: 'rgba(238, 237, 237, 1)'}
         } else {
-            return {textDecoration: 'none'}
+            return {textDecoration: 'none', 
+                    backgroundColor: '#ffffff'}
         }
     }
 
@@ -26,12 +29,14 @@ const TodoItem = ({todo, toggleCompleted, deleteTodo}) => {
 
 const styles = {
     todoItem: {
-        border: '2px solid #f4f4f4',
-        fontSize: '24px',
+        fontSize: '18px',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: '0 20px'
+        padding: '0 20px',
+        backgroundColor: '#ffffff',
+        borderRadius: '6px',
+        marginTop: '10px',
     },
     checkbox: {
         marginRight: '10px',
@@ -39,7 +44,7 @@ const styles = {
         width: '18px',
     },
     button: {
-        backgroundColor: '#BB0000',
+        backgroundColor: 'rgba(215, 19, 19, 1)',
         color: '#fff',
         height: '30px',
         width: '30px',
